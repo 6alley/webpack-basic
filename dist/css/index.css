@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  color: #333;
+  background: #e7e7e7; }
+
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin: 40px auto;
+  color: #333; }
+
+body {
+  background: yellow; }
