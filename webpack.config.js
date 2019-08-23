@@ -12,8 +12,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './js/[name].js?[hash:8]',
-    publicPath: '/dist/'
+    filename: './js/[name].js?[hash:8]'
   },
   resolve: {
     modules: [
@@ -110,13 +109,13 @@ module.exports = {
       title: 'pug轉換',
       filename: 'index.html',
       template: 'pug/index.pug',
-      chucks: ['index']
+      chunks: ['index']
     }),
     new HtmlWebpackPlugin({
       title: 'pug轉換',
       filename: 'about.html',
       template: 'pug/about.pug',
-      chucks: ['about']
+      chunks: ['about']
     })
   ]
 }
