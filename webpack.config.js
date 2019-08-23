@@ -110,13 +110,13 @@ module.exports = {
       title: 'pug轉換',
       filename: 'index.html',
       template: 'pug/index.pug',
-      chuck: ['index']
+      chucks: ['index']
     }),
     new HtmlWebpackPlugin({
       title: 'pug轉換',
       filename: 'about.html',
       template: 'pug/about.pug',
-      chuck: ['about']
+      chucks: ['about']
     })
   ]
 }
