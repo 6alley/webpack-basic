@@ -55,19 +55,30 @@ module.exports = {
               pretty: true
             }
           }
-        ]
+        ],
+        include: path.resolve('src/pug'),
+        exclude: path.resolve('./node_modules')
       },
       {
         test: /\.css$/,
-        use: extractCSS.extract(['css-loader', 'postcss-loader'])
+        use: extractCSS.extract(['css-loader', 'postcss-loader']),
+        include: path.resolve('src/css'),
+        exclude: path.resolve('./node_modules')
       },
       {
         test: /\.(sass|scss)$/,
-        use: extractCSS.extract(['css-loader', 'postcss-loader', 'sass-loader'])
+        use: extractCSS.extract([
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]),
+        include: path.resolve('src/sass'),
+        exclude: path.resolve('./node_modules')
       },
       {
         test: /\.js$/,
-        use: 'babel-loader'
+        use: 'babel-loader',
+        include: path.resolve('.')
       },
       {
         test: /\.(jpe?g|png|gif)$/,
@@ -98,7 +109,9 @@ module.exports = {
               }
             }
           }
-        ]
+        ],
+        include: path.resolve('src/images'),
+        exclude: path.resolve('./node_modules')
       }
     ]
   },
